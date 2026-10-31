@@ -1,0 +1,63 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="common.css"></head><body>
+
+<section class="scene" id="s1">
+  <div class="eyebrow">optionsBot · Agile with AI agents</div>
+  <h1>How a team of AI agents runs Agile.</h1>
+  <h2 id="t1b" style="margin-top:40px;color:var(--muted);opacity:0">A real board. A real ticket.</h2>
+</section>
+
+<section class="scene" id="s2">
+  <div class="k">GitHub Projects · the board</div>
+  <div class="ttl" style="margin-top:10px">Epics from an approved PRD</div>
+  <div class="shot"><div class="url">github.com/users/rchau73/projects/1</div><div class="view"><img id="i2" src="../shots/board_wide.png"></div></div>
+</section>
+
+<section class="scene" id="s3">
+  <div class="k">Epic E1 · issue #134</div>
+  <div class="ttl" style="margin-top:10px">Every story lives in one epic</div>
+  <div class="shot"><div class="url">github.com/rchau73/optionsBot/issues/134</div><div class="view"><img id="i3" src="../shots/epic134.png"></div></div>
+</section>
+
+<section class="scene" id="s4">
+  <div class="k">The flow</div>
+  <div class="ttl" style="margin-top:10px">Triage → Ready → Build → Review → Done</div>
+  <div class="shot"><div class="url">github.com/users/rchau73/projects/1</div><div class="view"><img id="i4" src="../shots/board_wide.png"></div></div>
+</section>
+
+<section class="scene" id="s5">
+  <div class="k">PR #556 · opened by the Dev agent</div>
+  <div class="ttl" style="margin-top:10px">Plan, changes, tests, risk and rollout</div>
+  <div class="shot"><div class="url">github.com/rchau73/optionsBot/pull/556</div><div class="view"><img id="i5" src="../shots/pr556.png"></div></div>
+</section>
+
+<section class="scene" id="s6">
+  <div class="k">PR #551 · the Reviewer agent</div>
+  <div class="ttl" style="margin-top:10px">A blocking finding sends it back</div>
+  <div class="shot"><div class="url">github.com/rchau73/optionsBot/pull/551</div><div class="view"><img id="i6" src="../shots/pr551_full.png"></div></div>
+</section>
+
+<section class="scene" id="s7"><div class="end">
+  <h1>Agents do the work.<br><span style="color:var(--human)">A person owns the decisions.</span></h1>
+  <div class="who">Roberto Chau · Engineering leader, AI-first delivery</div>
+  <div class="url">linkedin.com/in/robertochau</div>
+</div></section>
+
+<div class="cap" id="cap"></div><div class="bar" id="bar"></div>
+<script src="common.js"></script>
+<script>
+const D=44, t=T;
+$('#s1').style.opacity=vis(t,0,4.4); $('#t1b').style.opacity=ease(p(t,1.4,2.2));
+$('#s2').style.opacity=vis(t,4.2,11.2);  pan($('#i2'),t,4.6,10,[0,0,3600],[0,240,1050]);
+$('#s3').style.opacity=vis(t,11.2,18.2); pan($('#i3'),t,11.8,17.2,[0,60,2560],[40,1380,2100]);
+$('#s4').style.opacity=vis(t,18.2,25.2); pan($('#i4'),t,18.6,24.4,[540,230,1200],[2380,230,1200]);
+$('#s5').style.opacity=vis(t,25.2,32.2); pan($('#i5'),t,25.6,31.4,[40,200,2300],[40,2900,2300]);
+$('#s6').style.opacity=vis(t,32.2,39.2); pan($('#i6'),t,32.6,38.4,[180,8900,1800],[230,9180,1560]);
+$('#s7').style.opacity=vis(t,39.2,D+1);
+captions(t,[[4.6,11,"Each epic tracks its stories. The PM agent places every new ticket in one of them."],
+  [11.6,18,"Epic E1: 21 of 22 stories done, each linked to the pull request that closed it."],
+  [18.6,25,"Agents move the cards. Blocked waits for a person. 235 cards are Done."],
+  [25.6,32,"Every PR states its plan, tests and risk. This one changes a trading rule, so a person merges it."],
+  [32.6,39,"The Reviewer agent read the diff and blocked a PR that would have deleted shipped work."]]);
+$('#bar').style.width=(1080*t/D)+'px';
+</script></body></html>

@@ -1,0 +1,87 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="common.css"></head><body>
+
+<section class="scene" id="s1">
+  <div class="eyebrow">optionsBot · the product</div>
+  <h1>What the agents built.</h1>
+  <h2 id="t1b" style="margin-top:40px;color:var(--muted);opacity:0">A monitor for an options bot, running on Deribit testnet.</h2>
+</section>
+
+<section class="scene" id="s2">
+  <div class="k">Overview</div>
+  <div class="ttl" style="margin-top:10px">The answer first, coin before dollars</div>
+  <div class="shot"><div class="url">monitor · Overview</div><div class="view"><img id="i2" src="../shots/m_overview.jpg"></div></div>
+</section>
+
+<section class="scene" id="s3">
+  <div class="k">Overview · each bot</div>
+  <div class="ttl" style="margin-top:10px">The market, the positions, and why</div>
+  <div class="shot"><div class="url">monitor · Overview · BTC</div><div class="view"><img id="i3" src="../shots/m_why.jpg"></div></div>
+</section>
+
+<section class="scene" id="s4">
+  <div class="k">Positions</div>
+  <div class="ttl" style="margin-top:10px">A short strangle: a call and a put, sold together</div>
+  <div class="shot"><div class="url">monitor · Positions · BTC</div><div class="view"><img id="i4" src="../shots/m_positions_full.png"></div></div>
+</section>
+
+<section class="scene" id="s4b">
+  <div class="k">Positions · negative gamma regime</div>
+  <div class="ttl" style="margin-top:10px">One leg, on purpose</div>
+  <div class="shot"><div class="url">monitor · Positions · BTC</div><div class="view"><img id="i4b" src="../shots/m_positions.jpg"></div></div>
+</section>
+
+<section class="scene" id="s5">
+  <div class="k">Worst case</div>
+  <div class="ttl" style="margin-top:10px">Risk in plain words</div>
+  <div class="shot"><div class="url">monitor · Worst case · BTC</div><div class="view"><img id="i5" src="../shots/m_worst.jpg"></div></div>
+</section>
+
+<section class="scene" id="s6">
+  <div class="k">Income</div>
+  <div class="ttl" style="margin-top:10px">Losses shown as clearly as gains</div>
+  <div class="shot"><div class="url">monitor · Income · ETH</div><div class="view"><img id="i6" src="../shots/m_income.jpg"></div></div>
+</section>
+
+<section class="scene" id="s7">
+  <div class="k">Activity</div>
+  <div class="ttl" style="margin-top:10px">What the bot did, and why</div>
+  <div class="shot"><div class="url">monitor · Activity · BTC</div><div class="view"><img id="i7" src="../shots/m_activity.jpg"></div></div>
+</section>
+
+<section class="scene" id="s8">
+  <div class="k">Assistant</div>
+  <div class="ttl" style="margin-top:10px">Ask the bot, get sourced answers</div>
+  <div class="shot"><div class="url">monitor · Assistant</div><div class="view"><img id="i8" src="../shots/m_assistant.jpg"></div></div>
+</section>
+
+<section class="scene" id="s9"><div class="end">
+  <h1>Built by agents.<br><span style="color:var(--human)">Made for people.</span></h1>
+  <div class="who">Roberto Chau · Engineering leader, AI-first delivery</div>
+  <div class="url">linkedin.com/in/robertochau</div>
+</div></section>
+
+<div class="cap" id="cap"></div><div class="bar" id="bar"></div>
+<script src="common.js"></script>
+<script>
+const D=56, t=T;
+$('#s1').style.opacity=vis(t,0,4.4); $('#t1b').style.opacity=ease(p(t,1.4,2.2));
+$('#s2').style.opacity=vis(t,4.2,10.7);  pan($('#i2'),t,4.6,10,[0,0,1280],[0,150,920]);
+$('#s3').style.opacity=vis(t,10.7,16.7); pan($('#i3'),t,11,16,[0,110,1280],[0,175,900]);
+$('#s4').style.opacity=vis(t,16.7,22.7); pan($('#i4'),t,17,22,[0,140,1293],[20,190,1000]);
+$('#s4b').style.opacity=vis(t,22.7,28.7); pan($('#i4b'),t,23,28,[130,190,760],[140,215,700]);
+$('#s5').style.opacity=vis(t,28.7,34.7); pan($('#i5'),t,29,34,[180,120,920],[180,120,920]);
+$('#s6').style.opacity=vis(t,34.7,40.7); pan($('#i6'),t,35,40,[0,60,1150],[60,60,1080]);
+$('#s7').style.opacity=vis(t,40.7,46.7); pan($('#i7'),t,41,46,[250,110,780],[250,170,780]);
+$('#s8').style.opacity=vis(t,46.7,52.7); pan($('#i8'),t,47,52,[560,0,720],[560,60,720]);
+$('#s9').style.opacity=vis(t,52.7,D+1);
+captions(t,[[4.6,10.6,"What it earned, what is open, the worst case and the margin used: the answer before the detail."],
+  [11,16.6,"Each bot's market and positions, and a one-line reason for its last trade."],
+  [17,22.6,"A full strangle: what it pays at expiry, what it costs to close now, and the bot's exit lines."],
+  [23,28.6,"In a negative gamma regime with a bear trend, the bot stops selling puts, and the page says why."],
+  [29,34.6,"What a very bad day would cost, in coin and dollars, and what the estimate can't promise."],
+  [35,40.6,"October is a loss so far on testnet. The page says so, in the same place as the gains."],
+  [41,46.6,"Every decision comes from the bot's journal, written in plain English."],
+  [47,52.6,"An AI assistant answers from the docs and the bot's own journal, and links its sources."]]);
+$('#bar').style.width=(1080*t/D)+'px';
+</script></body></html>

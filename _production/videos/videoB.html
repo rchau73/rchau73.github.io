@@ -1,0 +1,89 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="common.css"></head><body>
+
+<section class="scene" id="s1">
+  <div class="eyebrow">optionsBot · DevOps for an agent team</div>
+  <h1>Every 6 minutes, a scheduler wakes the agents.</h1>
+  <h2 id="t1b" style="margin-top:40px;color:var(--muted);opacity:0">CI, deploys and releases do the rest.</h2>
+</section>
+
+<section class="scene" id="s2">
+  <div class="k">The scheduler · macOS launchd</div>
+  <div class="ttl" style="margin-top:10px">One tick, every 360 seconds</div>
+  <div class="term" id="tm2">
+<div class="ln"><span class="g">$</span> launchctl list | grep optionsbot</div>
+<div class="ln">-  0  com.optionsbot.agents-tick</div>
+<div class="ln">-  0  com.optionsbot.sme-review</div>
+<div class="ln"><span class="g">$</span> grep StartInterval -A1 com.optionsbot.agents-tick.plist</div>
+<div class="ln">&lt;key&gt;StartInterval&lt;/key&gt;&lt;integer&gt;360&lt;/integer&gt;</div>
+<div class="ln"> </div>
+<div class="ln"><span class="c"># each tick runs, in order:</span></div>
+<div class="ln"><span class="g">deploy.sh   </span> main → mvp, health check, cards → Done</div>
+<div class="ln"><span class="g">pr_gate.sh  </span> CI green → ready · reviewed clean → merge</div>
+<div class="ln"><span class="o">review_agent</span> reviews open PRs, posts findings</div>
+<div class="ln"><span class="o">dev_agent   </span> takes one Ready card → pull request</div>
+<div class="ln"><span class="o">pm_agent    </span> triage, epics, ranks the board</div>
+<div class="ln"><span class="c">+ daily/weekly: DORA, flaky tests, backups, reports</span></div>
+  </div>
+</section>
+
+<section class="scene" id="s3">
+  <div class="k">Ticket #553 in the logs · 30 Oct, local time (UTC−3)</div>
+  <div class="ttl" style="margin-top:10px">From epic to Done in 45 minutes</div>
+  <div class="term" id="tm3">
+<div class="ln"><span class="c">16:00:06</span> pm: #553 tagged with its epic</div>
+<div class="ln"><span class="c">16:08:02</span> dev: issue #553 → agent/issue-553</div>
+<div class="ln"><span class="c">16:24:19</span> dev: verifying agent/issue-553</div>
+<div class="ln"><span class="c">16:31:24</span> dev: PR …/optionsBot/pull/556</div>
+<div class="ln"><span class="c">16:36:25</span> pr-gate: #556 CI green → ready for review</div>
+<div class="ln"><span class="c">16:40:05</span> <span class="o">github: rchau73 merged #556 (a trading rule)</span></div>
+<div class="ln"><span class="c">16:42:27</span> deploy: mvp 4ea7721 → 7144e86</div>
+<div class="ln"><span class="c">16:45:24</span> deploy: mvp 7144e86 <span class="g">healthy</span></div>
+<div class="ln"><span class="c">16:45:32</span> deploy: #553 → <span class="g">Done</span></div>
+  </div>
+</section>
+
+<section class="scene" id="s4">
+  <div class="k">GitHub Actions · ci.yml</div>
+  <div class="ttl" style="margin-top:10px">Every push, every pull request</div>
+  <div class="shot"><div class="url">github.com/rchau73/optionsBot/actions</div><div class="view"><img id="i4" src="../shots/run_ci.png"></div></div>
+</section>
+
+<section class="scene" id="s5">
+  <div class="k">deploys.tsv · every deploy, recorded</div>
+  <div class="ttl" style="margin-top:10px">Stable moves only by release</div>
+  <div class="term" id="tm5" style="font-size:21px">
+<div class="ln"><span class="c">time (UTC)            env     commit   release</span></div>
+<div class="ln">2026-10-30 19:45:24  mvp     7144e86</div>
+<div class="ln">2026-10-30 20:07:06  mvp     00121f9</div>
+<div class="ln">2026-10-30 20:40:16  mvp     f7e24b1</div>
+<div class="ln">2026-10-30 21:24:51  mvp     255d68a</div>
+<div class="ln">2026-10-30 21:26:08  <span class="o">stable</span>  c035962  <span class="g">v0.3.1  manual, after the soak</span></div>
+<div class="ln">2026-10-30 23:56:55  <span class="o">stable</span>  255d68a  <span class="o">v0.3.2  escalation</span></div>
+<div class="ln"><span class="c">                     reason: "User asked to bring stable in</span></div>
+<div class="ln"><span class="c">                     sync … skipping the 3-day soak"</span></div>
+  </div>
+</section>
+
+<section class="scene" id="s6"><div class="end">
+  <h1>Engineering excellence, automated.<br><span style="color:var(--human)">Judgement, kept human.</span></h1>
+  <div class="who">Roberto Chau · Engineering leader, AI-first delivery</div>
+  <div class="url">linkedin.com/in/robertochau</div>
+</div></section>
+
+<div class="cap" id="cap"></div><div class="bar" id="bar"></div>
+<script src="common.js"></script>
+<script>
+const D=42, t=T;
+$('#s1').style.opacity=vis(t,0,4.4); $('#t1b').style.opacity=ease(p(t,1.4,2.2));
+$('#s2').style.opacity=vis(t,4.2,12.2); typeLines('#tm2',t,4.8,.5);
+$('#s3').style.opacity=vis(t,12.2,22.2); typeLines('#tm3',t,12.8,.85);
+$('#s4').style.opacity=vis(t,22.2,31.2); pan($('#i4'),t,22.6,30.4,[0,280,2880],[700,720,1750]);
+$('#s5').style.opacity=vis(t,31.2,38.2); typeLines('#tm5',t,31.8,.45);
+$('#s6').style.opacity=vis(t,38.2,D+1);
+captions(t,[[4.8,12,"Plain scripts on a schedule. The Dev and Reviewer agents each work in their own git worktree."],
+  [12.8,22,"Tagged, built with tests, CI green, merged by me, deployed and Done: all in the logs."],
+  [22.6,31,"Secret scan, lint, race-detector tests, coverage floor, frontend, vulnerability scan, Docker build."],
+  [31.8,38,"Stable takes a release after 3 days on mvp, or an escalation with its reason on record."]]);
+$('#bar').style.width=(1080*t/D)+'px';
+</script></body></html>

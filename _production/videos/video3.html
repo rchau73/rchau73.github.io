@@ -1,0 +1,75 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="common.css">
+<style>
+.tl{position:relative;margin-top:40px;padding-left:46px}
+.tl:before{content:"";position:absolute;left:14px;top:12px;bottom:12px;width:3px;background:var(--line)}
+.ev{position:relative;padding:12px 0 18px;opacity:0}
+.ev:before{content:"";position:absolute;left:-41px;top:22px;width:22px;height:22px;border-radius:50%;background:var(--accent)}
+.ev.me:before{background:var(--human)}
+.ev .tm{font:500 26px var(--mono);color:var(--muted)}
+.ev .tx{font:500 34px/1.3 var(--sans);margin-top:4px}
+.num{height:236px}
+.num .v{font-size:92px}
+</style></head><body>
+
+<section class="scene" id="s1">
+  <div class="eyebrow">optionsBot · delivery, measured</div>
+  <h1>How fast does a team of AI agents ship?</h1>
+  <h2 id="t1b" style="margin-top:40px;color:var(--muted);opacity:0">I don't guess. I measure it.</h2>
+</section>
+
+<section class="scene" id="s2">
+  <div class="eyebrow">The four DORA metrics · week of 26 Oct 2026 · mvp</div>
+  <div class="nums">
+    <div class="num"><div class="v" data-to="84">0</div><div class="l">deploys in one week</div></div>
+    <div class="num hi"><div class="v" data-to="4" data-suffix=" min">0</div><div class="l">merge → live (median; p90 7 min)</div></div>
+    <div class="num"><div class="v" data-to="1" data-suffix=" %">0</div><div class="l">change failure rate (1 of 85)</div></div>
+    <div class="num"><div class="v" data-to="57" data-suffix=" min">0</div><div class="l">to restore (one incident)</div></div>
+  </div>
+</section>
+
+<section class="scene" id="s3">
+  <div class="k">One change, 30 Oct 2026 (UTC)</div>
+  <h2 style="margin-top:14px">A repair bug, from issue to live</h2>
+  <div class="tl">
+    <div class="ev"><div class="tm">18:55</div><div class="tx">Issue #553 filed with evidence</div></div>
+    <div class="ev"><div class="tm">19:31</div><div class="tx">Dev agent opens PR #556, with tests</div></div>
+    <div class="ev me"><div class="tm">19:40</div><div class="tx">It changes a trading rule: <span class="warn">I merge it</span></div></div>
+    <div class="ev"><div class="tm">19:45</div><div class="tx">Live on mvp, the test environment</div></div>
+  </div>
+</section>
+
+<section class="scene" id="s4">
+  <h2>Two speeds, on purpose.</h2>
+  <div class="cols" style="margin-top:44px">
+    <div class="col ag" style="min-height:360px"><h3>mvp</h3>
+      <div class="v" style="font:600 92px/1 var(--serif)">4 min</div>
+      <p style="font:400 30px/1.35 var(--sans);color:var(--muted);margin-top:18px">from merge to live, on every merge</p></div>
+    <div class="col me" style="min-height:360px"><h3>stable</h3>
+      <div class="v" style="font:600 92px/1 var(--serif)">3.1 days</div>
+      <p style="font:400 30px/1.35 var(--sans);color:var(--muted);margin-top:18px">median: every release soaks 3 days on mvp first</p></div>
+  </div>
+</section>
+
+<section class="scene" id="s5"><div class="end">
+  <h1>Fast where it's safe.<br><span style="color:var(--human)">Slow where it matters.</span></h1>
+  <div class="who">Roberto Chau · Engineering leader, AI-first delivery</div>
+  <div class="url">linkedin.com/in/robertochau</div>
+</div></section>
+
+<div class="cap" id="cap"></div><div class="bar" id="bar"></div>
+<script src="common.js"></script>
+<script>
+const D=36, t=T;
+$('#s1').style.opacity=vis(t,0,4.4); $('#t1b').style.opacity=ease(p(t,1.4,2.2));
+$('#s2').style.opacity=vis(t,4.2,13.2);
+$$('#s2 .num').forEach((n,i)=>{n.style.opacity=ease(p(t,5+i*.7,5.6+i*.7)); count(n.querySelector('.v'),t,5+i*.7,7.4+i*.7);});
+$('#s3').style.opacity=vis(t,13.2,24.2);
+$$('.ev').forEach((e,i)=>e.style.opacity=ease(p(t,14.4+i*1.6,15+i*1.6)));
+$('#s4').style.opacity=vis(t,24.2,32.2);
+$('#s5').style.opacity=vis(t,32.2,D+1);
+captions(t,[[5,13,"Elite on three of the four by DORA bands. Time to restore has one sample, too few to rate."],
+  [14,24,"From a filed issue to live in 50 minutes, with a person on the risky step."],
+  [24.6,32,"The test environment moves in minutes. The stable one waits for evidence."]]);
+$('#bar').style.width=(1080*t/D)+'px';
+</script></body></html>

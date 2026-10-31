@@ -1,0 +1,122 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+:root{--bg:#101519;--card:#1b2329;--line:#2b363e;--ink:#e7e9e4;--muted:#9aa5ad;--accent:#4fcfb3;--human:#f0a868;
+  --serif:"Iowan Old Style","Palatino",Georgia,serif;--sans:"Helvetica Neue",Helvetica,Arial,sans-serif;--mono:Menlo,"SF Mono",monospace}
+*{box-sizing:border-box;margin:0}
+html,body{width:1080px;height:1080px;overflow:hidden;background:var(--bg);color:var(--ink);font-family:var(--sans)}
+.scene{position:absolute;inset:0;padding:80px 80px 190px;opacity:0;display:flex;flex-direction:column;justify-content:center}
+.eyebrow{font:500 22px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+h1{font:600 84px/1.08 var(--serif);margin-top:28px}
+h2{font:600 52px/1.12 var(--serif)}
+.cap{position:absolute;left:0;right:0;bottom:0;height:150px;display:flex;align-items:center;justify-content:center;padding:0 80px;
+  background:linear-gradient(transparent,rgba(0,0,0,.55) 35%);font:500 36px/1.3 var(--sans);text-align:center;opacity:0}
+.chip{align-self:flex-start;display:inline-flex;gap:14px;align-items:center;border:2px solid var(--accent);border-radius:999px;padding:12px 26px;font:500 27px var(--mono);color:var(--ink)}
+.chip b{color:var(--accent)}
+.cards{margin-top:40px;display:flex;flex-direction:column;gap:16px}
+.card{height:112px;border:2px solid var(--line);background:var(--card);border-radius:14px;padding:18px 28px;display:flex;align-items:center;gap:28px;transform-origin:left center}
+.card .n{font:500 24px var(--mono);color:var(--muted);width:40px}
+.card .r{font:600 34px var(--serif);width:290px;flex:none}
+.card .d{font:400 27px/1.3 var(--sans);color:var(--muted)}
+.card.me .r{color:var(--human)}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:36px;margin-top:56px}
+.col{border-radius:16px;padding:34px;border:2px solid var(--line);background:var(--card);min-height:520px}
+.col h3{font:600 38px var(--serif);margin-bottom:26px}
+.col li{list-style:none;font:400 31px/1.35 var(--sans);padding:12px 0;border-top:1px solid var(--line);opacity:0}
+.col.ag h3{color:var(--accent)} .col.me{border-color:var(--human)} .col.me h3{color:var(--human)}
+.nums{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:56px}
+.num{background:var(--card);border:2px solid var(--line);border-radius:16px;padding:34px 36px;height:250px;opacity:0}
+.num .v{font:600 104px/1 var(--serif);font-variant-numeric:tabular-nums}
+.num .l{font:400 30px/1.3 var(--sans);color:var(--muted);margin-top:18px}
+.num.hi .v{color:var(--accent)}
+.note{font:400 24px var(--mono);color:var(--muted);margin-top:30px}
+.end{display:flex;flex-direction:column;justify-content:center}
+.end h1{font-size:92px}
+.end .who{margin-top:56px;font:500 32px var(--sans)}
+.end .url{font:400 28px var(--mono);color:var(--accent);margin-top:10px}
+.bar{position:absolute;left:0;bottom:0;height:6px;background:var(--accent)}
+</style></head><body>
+
+<section class="scene" id="s1">
+  <div class="eyebrow">Roberto Chau · AI-first engineering</div>
+  <h1 id="t1">I run an engineering team made of AI agents.</h1>
+  <h2 id="t1b" style="margin-top:44px;color:var(--muted);opacity:0">Here is what I still decide myself.</h2>
+</section>
+
+<section class="scene" id="s2">
+  <div class="chip" id="chip"><b>#553</b> Repair picked a strike from a broken quote</div>
+  <div class="cards">
+    <div class="card"><span class="n">01</span><span class="r">Domain expert</span><span class="d">Spots it in the live bots, files the issue with evidence</span></div>
+    <div class="card"><span class="n">02</span><span class="r">Product manager</span><span class="d">Places it in the strategy epic, moves it to Ready</span></div>
+    <div class="card"><span class="n">03</span><span class="r">Developer</span><span class="d">Writes the fix and its tests, opens PR #556</span></div>
+    <div class="card"><span class="n">04</span><span class="r">Reviewer</span><span class="d">Reviews the diff against the repository's rules</span></div>
+    <div class="card me"><span class="n">05</span><span class="r">Me</span><span class="d">It changes a trading rule: policy. I read it and merge it.</span></div>
+  </div>
+</section>
+
+<section class="scene" id="s3">
+  <h2>Agents propose everything.<br>A person merges what carries risk.</h2>
+  <div class="cols">
+    <div class="col ag"><h3>Ships on its own</h3><ul>
+      <li>Docs and monitor pages</li><li>Tests and tooling</li><li>Agent workflow fixes</li><li>…once reviewed clean and CI is green</li></ul></div>
+    <div class="col me"><h3>Waits for me</h3><ul>
+      <li>Trading and risk rules</li><li>Configuration and CI</li><li>Agent permissions</li><li>Every release to stable</li></ul></div>
+  </div>
+</section>
+
+<section class="scene" id="s4">
+  <div class="eyebrow">One month of delivery · October 2026</div>
+  <div class="nums">
+    <div class="num"><div class="v" data-to="302">0</div><div class="l">pull requests merged</div></div>
+    <div class="num hi"><div class="v" data-to="167">0</div><div class="l">written by the Dev agent</div></div>
+    <div class="num"><div class="v" data-to="4" data-suffix=" min">0</div><div class="l">merge → live on mvp (median)</div></div>
+    <div class="num"><div class="v" data-to="1" data-suffix=" %">0</div><div class="l">change failure rate</div></div>
+  </div>
+  <div class="note">optionsBot · a study project on Deribit testnet</div>
+</section>
+
+<section class="scene" id="s5"><div class="end">
+  <h1>AI writes the code.<br><span style="color:var(--human)">I decide what ships.</span></h1>
+  <div class="who">Roberto Chau · Engineering leader, AI-first delivery</div>
+  <div class="url">linkedin.com/in/robertochau</div>
+</div></section>
+
+<div class="cap" id="cap"></div>
+<div class="bar" id="bar"></div>
+
+<script>
+const D=36;
+const cl=(x,a=0,b=1)=>Math.min(b,Math.max(a,x));
+const p=(t,a,b)=>cl((t-a)/(b-a));
+const ease=x=>1-Math.pow(1-x,3);
+const vis=(t,a,b,f=.5)=>Math.min(ease(p(t,a,a+f)),1-ease(p(t,b-f,b)));
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const caps=[[4.6,13.2,"Every change flows through the same loop of agents."],[13.2,16,"Changes that carry risk stop at a person."],
+  [16.4,24,"Agents propose. A person approves the risk."],[24.4,32,"One month of delivery, measured."]];
+function render(t){
+  const s1=vis(t,0,4.4); $('#s1').style.opacity=s1;
+  $('#t1').style.transform=`translateY(${(1-ease(p(t,0,.8)))*30}px)`;
+  $('#t1b').style.opacity=ease(p(t,1.4,2.2));
+  $('#s2').style.opacity=vis(t,4.2,16.2);
+  const steps=[5,7,9,11,13];
+  $$('.card').forEach((c,i)=>{
+    const on=p(t,steps[i],steps[i]+.5), active=t>=steps[i]&&(i==4||t<steps[i+1]);
+    const col=i==4?'var(--human)':'var(--accent)';
+    c.style.opacity=.35+.65*ease(on);
+    c.style.borderColor=active?col:'var(--line)';
+    c.style.transform=`scale(${active?1.02:1})`;
+    c.querySelector('.d').style.opacity=ease(on);
+  });
+  $('#chip').style.transform=`translateY(${(1-ease(p(t,4.4,5.2)))*-20}px)`;
+  $('#s3').style.opacity=vis(t,16.2,24.2);
+  $$('#s3 li').forEach((li,i)=>{const k=i%4,c=i<4?0:1;li.style.opacity=ease(p(t,17.2+c*.4+k*.9,17.8+c*.4+k*.9));});
+  $('#s4').style.opacity=vis(t,24.2,32.2);
+  $$('.num').forEach((n,i)=>{const q=p(t,25+i*.6,25.6+i*.6);n.style.opacity=ease(q);
+    const v=n.querySelector('.v'),to=+v.dataset.to,k=ease(p(t,25+i*.6,27.4+i*.6));v.textContent=Math.round(to*k)+(v.dataset.suffix||'');});
+  $('#s5').style.opacity=vis(t,32.2,D+1);
+  const c=caps.find(x=>t>=x[0]&&t<x[1]);const cap=$('#cap');
+  if(c){cap.textContent=c[2];cap.style.opacity=Math.min(ease(p(t,c[0],c[0]+.4)),1-ease(p(t,c[1]-.3,c[1])));}else cap.style.opacity=0;
+  $('#bar').style.width=(1080*t/D)+'px';
+}
+const t=parseFloat((location.hash||'#0').slice(1))||0; render(t);
+</script></body></html>
