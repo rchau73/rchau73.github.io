@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Roberto Chau — Engineering leader building with AI agents</title>
+<meta name="description" content="Roberto Chau, Senior Software Engineering Manager in São Paulo. AI-first software development, agentic workflows and engineering leadership, shown through optionsBot: a trading system built by a governed team of AI agents.">
+<meta name="keywords" content="Roberto Chau, engineering manager, AI engineering leadership, agentic AI, AI-first SDLC, multi-agent systems, Claude Code, MCP, RAG, LLM evaluation, Go, Next.js, DORA metrics, fintech, São Paulo">
+<meta name="author" content="Roberto Chau">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Roberto Chau — Engineering leader building with AI agents">
+<meta property="og:description" content="I lead engineering teams, and I run one made of AI agents: 302 merged PRs in a month, people in charge of every risky change.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Roberto Chau","alternateName":"Roberto Eduardo Chaú Montecinos","jobTitle":"Senior Software Engineering Manager","address":{"@type":"PostalAddress","addressLocality":"São Paulo","addressCountry":"BR"},"sameAs":["https://www.linkedin.com/in/robertochau","https://github.com/rchau73"],"knowsAbout":["Engineering management","Agentic AI","AI-first software development","Multi-agent systems","Claude Code","Model Context Protocol","Retrieval-augmented generation","LLM evaluation","Go","Next.js","DORA metrics","Fintech","Algorithmic trading"]}
+</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-row">
+    <a class="mark" href="#">RC</a>
+    <nav>
+      <a href="#work">Work</a>
+      <a href="#how">How I work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero wrap">
+    <p class="eyebrow">Roberto Chau · São Paulo · remote or hybrid</p>
+    <h1>I lead engineering teams.<br>I also run one made of AI agents.</h1>
+    <p class="lede">Senior Software Engineering Manager working on AI-first software delivery: agentic workflows, GenAI platforms and the guardrails that keep people in charge of the decisions that matter.</p>
+    <div class="cta">
+      <a class="btn primary" href="#work">See the case study</a>
+      <a class="btn" href="https://www.linkedin.com/in/robertochau">LinkedIn</a>
+      <a class="btn" href="https://github.com/rchau73">GitHub</a>
+    </div>
+  </section>
+
+  <section id="work" class="band">
+    <div class="wrap">
+      <p class="eyebrow">Case study · June – October 2026</p>
+      <h2>optionsBot: a trading system built by a governed team of AI agents</h2>
+      <p class="measure">An automated options-trading system for the Deribit crypto exchange, running on testnet.
+        Claude Code agents write most of the code on a schedule; I designed the roles they play, the rules they follow and the decisions only a person may take.</p>
+
+      <dl class="stats">
+        <div><dt>Merged pull requests</dt><dd>302</dd><span>167 by the Dev agent</span></div>
+        <div><dt>Merge → live on mvp</dt><dd>4 min</dd><span>median, week 2026-W44</span></div>
+        <div><dt>Change failure rate</dt><dd>1 %</dd><span>1 of 85 deploys</span></div>
+        <div><dt>AI reviews</dt><dd>158</dd><span>19 blocked a merge</span></div>
+      </dl>
+
+      <figure class="flow" aria-labelledby="flow-cap">
+        <ol>
+          <li><b>Domain expert</b><span>reviews the live bots daily, files issues with evidence</span></li>
+          <li><b>Product manager</b><span>triages each issue into an approved epic, ranks the board</span></li>
+          <li><b>Developer</b><span>implements one card with tests, opens a pull request</span></li>
+          <li><b>Reviewer</b><span>checks the change against the repository's rules</span></li>
+          <li class="human"><b>Me</b><span>merges every policy change, approves every release</span></li>
+        </ol>
+        <figcaption id="flow-cap">The delivery loop. Trading rules, risk limits, CI and agent permissions are policy: agents may propose them; only a person merges them.</figcaption>
+      </figure>
+
+      <div class="grid2">
+        <article>
+          <h3>What the system does</h3>
+          <ul>
+            <li>Sells BTC and ETH option strangles and manages each through entry, rolls, stops and a kill switch.</li>
+            <li>Treats the exchange as unreliable: rate-limit pools, retries, a circuit breaker, reconciliation every cycle.</li>
+            <li>Journals every decision with a snapshot of the market, which feeds the monitor and the P&amp;L attribution.</li>
+            <li>A Next.js monitor with an assistant that answers from the bot's own docs and journal (RAG, with an evaluation set).</li>
+          </ul>
+        </article>
+        <article>
+          <h3>Guardrails that earned their place</h3>
+          <ul>
+            <li>A secret scan over every commit stopped an agent's test fixture with realistic-looking fake keys.</li>
+            <li>The Reviewer agent blocked a rebuilt PR that would have reverted two merged changes.</li>
+            <li>Every release runs 3 days on the mvp environment before stable; each exception is audited.</li>
+            <li>Delivery is measured with the four DORA metrics per week and environment.</li>
+          </ul>
+        </article>
+      </div>
+
+      <p class="links"><a href="https://github.com/rchau73/optionsBot/blob/main/PORTFOLIO.md">Read the full summary</a> · <a href="https://github.com/rchau73/optionsBot/blob/main/AGENTIC.md">The agent workflow</a> · <a href="https://github.com/rchau73/optionsBot">Source on GitHub</a></p>
+      <p class="note">A personal software-engineering study on Deribit testnet. Not a commercial product and not investment advice.</p>
+    </div>
+  </section>
+
+  <section id="how" class="wrap">
+    <p class="eyebrow">How I work</p>
+    <h2>AI speeds up delivery. Judgement decides what ships.</h2>
+    <div class="principles">
+      <article><h3>Decide where people stay in the loop</h3><p>Before agents write code, I write down which changes are policy. Those wait for a person; everything else flows.</p></article>
+      <article><h3>Make every decision explainable</h3><p>Tickets, reviews and journals carry the reasoning, so anyone can trace why a change shipped or a trade was made.</p></article>
+      <article><h3>Measure delivery, not activity</h3><p>Lead time, deploy frequency, change failure rate and time to restore, per environment. Volume of AI output is not a metric.</p></article>
+      <article><h3>Let guardrails fail loudly</h3><p>Secret scans, coverage floors, soak periods and audited exceptions catch mistakes from people and agents alike.</p></article>
+    </div>
+  </section>
+
+  <section id="about" class="band">
+    <div class="wrap about">
+      <div>
+        <p class="eyebrow">About</p>
+        <h2>People first, then technology</h2>
+        <p class="measure">My main strength is leading people: building safe, collaborative teams that keep improving while they solve hard problems with technology.
+          At TELUS Digital I lead the delivery of GenAI conversational platforms (LLM, RAG and deterministic flows) and the adoption and governance of AI-assisted development across engineering teams.</p>
+        <p class="measure">Before management I built full-stack, distributed and mobile systems, and I still build: optionsBot is how I test the practices I recommend.</p>
+      </div>
+      <ul class="tags" aria-label="Skills">
+        <li>Engineering management</li><li>AI-first SDLC</li><li>Agentic workflows</li><li>Claude Code</li><li>MCP</li><li>RAG</li><li>LLM evaluation</li><li>AI governance</li><li>Go</li><li>Next.js / React</li><li>TypeScript</li><li>AWS · Kubernetes</li><li>CI/CD · DevSecOps</li><li>DORA metrics</li><li>Fintech</li><li>Product discovery</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Later: a "Work with me" section for advisory on AI-first engineering, between About and Contact. -->
+
+  <section id="contact" class="wrap contact">
+    <p class="eyebrow">Contact</p>
+    <h2>Open to engineering leadership roles in AI</h2>
+    <p class="measure">Engineering Manager, Head of AI Engineering or AI enablement roles, remote or hybrid in São Paulo. The fastest way to reach me is LinkedIn.</p>
+    <div class="cta">
+      <a class="btn primary" href="https://www.linkedin.com/in/robertochau">Message me on LinkedIn</a>
+      <a class="btn" href="https://github.com/rchau73">GitHub</a>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap foot">
+  <span>© 2026 Roberto Chau</span>
+  <span>Built with Claude Code; hosted on GitHub Pages.</span>
+</footer>
+</body>
+</html>
