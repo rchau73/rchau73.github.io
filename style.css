@@ -112,3 +112,13 @@ nav a:hover { color: var(--ink); }
 .showcase { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 2rem; align-items: center; margin: 2.5rem 0; }
 .showcase .stats { grid-template-columns: 1fr 1fr; margin: 0; }
 @media (max-width: 860px) { .showcase { grid-template-columns: 1fr; } }
+.films { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+.film { margin: 0; min-width: 0; display: flex; flex-direction: column; gap: 0.75rem; }
+.film video { display: block; width: 100%; height: auto; max-width: 100%; border-radius: 12px; border: 1px solid var(--line); background: #101519; }
+.film figcaption { display: flex; flex-direction: column; gap: 0.2rem; }
+.film figcaption span { color: var(--muted); font-size: 0.95rem; }
+.diagram { margin: 2rem 0 0; }
+.diagram-scroll { overflow-x: auto; border: 1px solid var(--line); border-radius: 12px; background: #ffffff; }
+.diagram-scroll img { display: block; width: 2400px; max-width: none; height: auto; }
+.diagram figcaption { margin-top: 0.6rem; font-size: 0.9rem; color: var(--muted); }
+.sub { margin-top: 3rem; }

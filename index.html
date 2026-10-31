@@ -25,6 +25,8 @@
     <a class="mark" href="#" aria-label="Roberto Chau, home">RCH</a>
     <nav>
       <a href="#work">Work</a>
+      <a href="#sdlc">AI SDLC</a>
+      <a href="#films">Films</a>
       <a href="#how">How I work</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
@@ -104,6 +106,65 @@
 
       <p class="links"><a href="https://github.com/rchau73/optionsBot/blob/main/PORTFOLIO.md">Read the full summary</a> · <a href="https://github.com/rchau73/optionsBot/blob/main/AGENTIC.md">The agent workflow</a> · <a href="https://github.com/rchau73/optionsBot">Source on GitHub</a></p>
       <p class="note">A personal software-engineering study on Deribit testnet. Not a commercial product and not investment advice.</p>
+    </div>
+  </section>
+
+  <section id="sdlc" class="band">
+    <div class="wrap">
+      <p class="eyebrow">The AI-first SDLC</p>
+      <h2>From a finding on the live system to a deploy, with gates where judgement matters</h2>
+      <p class="measure">Agents triage, build, review and deploy on a 6-minute schedule. A person approves the product direction, decides what the PRD does not cover, and merges every change to policy. The whole model, its roles and its guardrails are written down in AGENTIC.md.</p>
+      <p class="cta"><a class="btn primary" href="https://github.com/rchau73/optionsBot/blob/main/AGENTIC.md">Read the agentic model (AGENTIC.md)</a></p>
+      <figure class="diagram">
+        <div class="diagram-scroll"><img src="media/agentic-workflow.png" width="3600" height="557" alt="The agentic workflow: the SME agent reviews the testnet bots and files issues; the PM agent triages them into epics of the approved PRD; the Dev agent builds a Ready card into a pull request; the Reviewer agent reviews it; a person merges policy changes; the deploy script ships to the test environment and moves the card to Done; the SME verifies the outcome on live data."></div>
+        <figcaption>The workflow, from <a href="https://github.com/rchau73/optionsBot/blob/main/docs/agentic_workflow.mmd">docs/agentic_workflow.mmd</a>. Scroll sideways; <a href="media/agentic-workflow.png">open it full size</a>.</figcaption>
+      </figure>
+      <h3 class="sub">Three views of the same system</h3>
+      <div class="films">
+      <figure class="film">
+        <video controls muted playsinline preload="none" poster="media/videoA-poster.jpg" width="1080" height="1080">
+          <source src="media/videoA-agile-board.mp4" type="video/mp4">
+        </video>
+        <figcaption><b>Agile with AI agents</b><span>The board, epics, triage, a Dev agent PR and a Reviewer block. For engineering managers and Agile leaders.</span></figcaption>
+      </figure>
+      <figure class="film">
+        <video controls muted playsinline preload="none" poster="media/videoB-poster.jpg" width="1080" height="1080">
+          <source src="media/videoB-devops.mp4" type="video/mp4">
+        </video>
+        <figcaption><b>DevOps and orchestration</b><span>The 6-minute scheduler, one ticket through the logs, CI on GitHub Actions and audited releases.</span></figcaption>
+      </figure>
+      <figure class="film">
+        <video controls muted playsinline preload="none" poster="media/videoC-poster.jpg" width="1080" height="1080">
+          <source src="media/videoC-product.mp4" type="video/mp4">
+        </video>
+        <figcaption><b>The product</b><span>The monitor running on testnet: positions, risk, P&amp;L and why the bot did what it did.</span></figcaption>
+      </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="films" class="wrap">
+    <p class="eyebrow">Short films · 36 seconds each, captioned</p>
+    <h2>The rest of the story, in three short films</h2>
+    <div class="films">
+      <figure class="film">
+        <video controls muted playsinline preload="none" poster="media/video2-poster.jpg" width="1080" height="1080">
+          <source src="media/video2-two-mistakes-caught.mp4" type="video/mp4">
+        </video>
+        <figcaption><b>Two AI mistakes in one day</b><span>A secret scan and the Reviewer agent stopped both before they reached main.</span></figcaption>
+      </figure>
+      <figure class="film">
+        <video controls muted playsinline preload="none" poster="media/video3-poster.jpg" width="1080" height="1080">
+          <source src="media/video3-delivery-measured.mp4" type="video/mp4">
+        </video>
+        <figcaption><b>Delivery, measured</b><span>The four DORA metrics, and one change from issue to live in 50 minutes.</span></figcaption>
+      </figure>
+      <figure class="film">
+        <video controls muted playsinline preload="none" poster="media/video4-poster.jpg" width="1080" height="1080">
+          <source src="media/video4-ai-reviewer.mp4" type="video/mp4">
+        </video>
+        <figcaption><b>What an AI reviewer catches</b><span>158 reviews, 19 blocked merges, and what it still can’t decide.</span></figcaption>
+      </figure>
     </div>
   </section>
 
