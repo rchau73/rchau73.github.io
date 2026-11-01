@@ -135,3 +135,14 @@ nav a:hover { color: var(--ink); }
 .track a { font-weight: 500; font-size: 0.95rem; }
 @media (max-width: 860px) { .track { grid-template-columns: 1fr; } }
 #track { padding-top: 0; }
+.watch { max-width: 52rem; }
+.watch-video { margin: 1.5rem 0 1.5rem; }
+.scenes { list-style: none; margin: 0; padding: 0; display: grid; gap: 1rem; }
+.scenes li { display: grid; grid-template-columns: 3.2rem minmax(0, 1fr); gap: 0.75rem; }
+.scenes .ts { font: 500 0.85rem/1.9 "IBM Plex Mono", ui-monospace, monospace; color: var(--muted); }
+.scenes code { font: 400 0.9em "IBM Plex Mono", ui-monospace, monospace; }
+.watch .note { margin-top: 2rem; }
+.film-more { font-size: 0.9rem; font-weight: 500; }
+.scope { margin: 1.5rem 0 0; padding: 0.9rem 1.1rem; background: var(--card); border: 1px solid var(--line); border-left: 3px solid var(--human); border-radius: 8px; font-size: 0.95rem; color: var(--muted); }
+.scope b { color: var(--ink); }
+.more-films { margin: 0; padding-left: 1.1rem; display: grid; gap: 0.35rem; }

@@ -1,4 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://rchau73.github.io/</loc><lastmod>2026-10-31</lastmod></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+  <url><loc>https://rchau73.github.io/</loc><lastmod>2026-11-01</lastmod></url>
+  <url>
+    <loc>https://rchau73.github.io/videos/ai-agent-team/</loc><lastmod>2026-11-01</lastmod>
+    <video:video>
+      <video:thumbnail_loc>https://rchau73.github.io/media/video1-poster.jpg</video:thumbnail_loc>
+      <video:title>An engineering team made of AI agents</video:title>
+      <video:description>One real ticket through a loop of AI agents (domain expert, product manager, developer, reviewer) and the change that stops at a person; then one month of delivery: 302 pull requests, 4 minutes from merge to live, 1 % change failure rate.</video:description>
+      <video:content_loc>https://rchau73.github.io/media/video1-ai-agent-team.mp4</video:content_loc>
+      <video:duration>36</video:duration>
+      <video:publication_date>2026-10-30</video:publication_date>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://rchau73.github.io/videos/two-mistakes-caught/</loc><lastmod>2026-11-01</lastmod>
+    <video:video>
+      <video:thumbnail_loc>https://rchau73.github.io/media/video2-poster.jpg</video:thumbnail_loc>
+      <video:title>Two AI mistakes in one day</video:title>
+      <video:description>On 30 October 2026 an AI agent made two mistakes on optionsBot: fake but realistic keys in a test file, and a rebuild on the wrong base that reverted merged work. A secret scan and the Reviewer agent stopped both before they reached main.</video:description>
+      <video:content_loc>https://rchau73.github.io/media/video2-two-mistakes-caught.mp4</video:content_loc>
+      <video:duration>36</video:duration>
+      <video:publication_date>2026-10-30</video:publication_date>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://rchau73.github.io/videos/delivery-measured/</loc><lastmod>2026-11-01</lastmod>
+    <video:video>
+      <video:thumbnail_loc>https://rchau73.github.io/media/video3-poster.jpg</video:thumbnail_loc>
+      <video:title>Delivery, measured</video:title>
+      <video:description>The four DORA metrics for a team of AI agents in the week of 26 October 2026, one change from issue to live in 50 minutes, and why the test and stable environments move at different speeds.</video:description>
+      <video:content_loc>https://rchau73.github.io/media/video3-delivery-measured.mp4</video:content_loc>
+      <video:duration>36</video:duration>
+      <video:publication_date>2026-10-30</video:publication_date>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://rchau73.github.io/videos/ai-reviewer/</loc><lastmod>2026-11-01</lastmod>
+    <video:video>
+      <video:thumbnail_loc>https://rchau73.github.io/media/video4-poster.jpg</video:thumbnail_loc>
+      <video:title>What an AI reviewer catches</video:title>
+      <video:description>158 AI code reviews on optionsBot: 19 blocked a merge. Three real bugs it caught, and what an AI reviewer still can't decide.</video:description>
+      <video:content_loc>https://rchau73.github.io/media/video4-ai-reviewer.mp4</video:content_loc>
+      <video:duration>36</video:duration>
+      <video:publication_date>2026-10-30</video:publication_date>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://rchau73.github.io/videos/agile-board/</loc><lastmod>2026-11-01</lastmod>
+    <video:video>
+      <video:thumbnail_loc>https://rchau73.github.io/media/videoA-poster.jpg</video:thumbnail_loc>
+      <video:title>Agile with AI agents</video:title>
+      <video:description>How a team of AI agents runs Agile on a real GitHub Projects board: epics from an approved PRD, triage, a Dev agent pull request and a Reviewer agent block. For engineering managers and Agile leaders.</video:description>
+      <video:content_loc>https://rchau73.github.io/media/videoA-agile-board.mp4</video:content_loc>
+      <video:duration>44</video:duration>
+      <video:publication_date>2026-10-31</video:publication_date>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://rchau73.github.io/videos/devops/</loc><lastmod>2026-11-01</lastmod>
+    <video:video>
+      <video:thumbnail_loc>https://rchau73.github.io/media/videoB-poster.jpg</video:thumbnail_loc>
+      <video:title>DevOps for a team of AI agents</video:title>
+      <video:description>A scheduler wakes the AI agents every 6 minutes; one ticket goes from epic to Done in 45 minutes; CI runs on GitHub Actions on every push; stable takes a release only after a 3-day soak or an escalation with its reason on record.</video:description>
+      <video:content_loc>https://rchau73.github.io/media/videoB-devops.mp4</video:content_loc>
+      <video:duration>42</video:duration>
+      <video:publication_date>2026-10-31</video:publication_date>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://rchau73.github.io/videos/product/</loc><lastmod>2026-11-01</lastmod>
+    <video:video>
+      <video:thumbnail_loc>https://rchau73.github.io/media/videoC-poster.jpg</video:thumbnail_loc>
+      <video:title>The product the agents built</video:title>
+      <video:description>A tour of the optionsBot monitor, built by a team of AI agents: the overview, positions in a short strangle, a one-legged position in a negative gamma regime, the worst case, income with losses shown, the activity journal and an AI assistant with sourced answers.</video:description>
+      <video:content_loc>https://rchau73.github.io/media/videoC-product.mp4</video:content_loc>
+      <video:duration>56</video:duration>
+      <video:publication_date>2026-10-31</video:publication_date>
+    </video:video>
+  </url>
 </urlset>

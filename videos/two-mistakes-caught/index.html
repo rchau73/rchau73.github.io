@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Two AI mistakes in one day — Roberto Chau</title>
+<meta name="description" content="A 36-second film: On 30 October 2026 an AI agent made two mistakes on optionsBot: fake but realistic keys in a test file, and a rebuild on the wrong base that reverted merged work. A secret scan and the Reviewer agent stopped both before they reached main. By Roberto Chau.">
+<meta name="author" content="Roberto Chau">
+<link rel="canonical" href="https://rchau73.github.io/videos/two-mistakes-caught/">
+<meta property="og:type" content="video.other">
+<meta property="og:url" content="https://rchau73.github.io/videos/two-mistakes-caught/">
+<meta property="og:title" content="Two AI mistakes in one day">
+<meta property="og:description" content="On 30 October 2026 an AI agent made two mistakes on optionsBot: fake but realistic keys in a test file, and a rebuild on the wrong base that reverted merged work. A secret scan and the Reviewer agent stopped both before they reached main.">
+<meta property="og:image" content="https://rchau73.github.io/media/video2-poster.jpg">
+<meta property="og:video" content="https://rchau73.github.io/media/video2-two-mistakes-caught.mp4">
+<meta property="og:video:type" content="video/mp4">
+<meta property="og:video:width" content="1080">
+<meta property="og:video:height" content="1080">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../../style.css">
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "VideoObject", "name": "Two AI mistakes in one day", "description": "On 30 October 2026 an AI agent made two mistakes on optionsBot: fake but realistic keys in a test file, and a rebuild on the wrong base that reverted merged work. A secret scan and the Reviewer agent stopped both before they reached main.", "thumbnailUrl": "https://rchau73.github.io/media/video2-poster.jpg", "uploadDate": "2026-10-30", "duration": "PT36S", "contentUrl": "https://rchau73.github.io/media/video2-two-mistakes-caught.mp4", "embedUrl": "https://rchau73.github.io/videos/two-mistakes-caught/", "inLanguage": "en", "creator": {"@type": "Person", "name": "Roberto Chau", "url": "https://rchau73.github.io/"}}
+</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-row">
+    <a class="mark" href="../../" aria-label="Roberto Chau, home">RCH</a>
+    <nav>
+      <a href="../../#work">Work</a>
+      <a href="../../#films">Films</a>
+      <a href="../../#sdlc">AI SDLC</a>
+      <a href="../../#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="wrap watch">
+    <p class="eyebrow">Film · 36 seconds · captioned</p>
+    <h1>Two AI mistakes in one day</h1>
+    <figure class="video watch-video">
+      <video controls muted playsinline preload="metadata" poster="../../media/video2-poster.jpg" width="1080" height="1080">
+        <source src="../../media/video2-two-mistakes-caught.mp4" type="video/mp4">
+      </video>
+    </figure>
+    <p class="lede">Two mistakes by AI agents on the same day, 30 October 2026. Neither reached the main branch, because the guardrails were already in place.</p>
+    <aside class="scope" role="note"><b>About this page.</b> It shows the agentic approach: how AI agents and people share the work. It is not a detailed account of the implementation. For the scripts, the agents' rules and the full workflow, see the <a href="https://github.com/rchau73/optionsBot">repository on GitHub</a>.</aside>
+
+    <h2 class="sub">What the film shows</h2>
+    <ol class="scenes">
+      <li><span class="ts">0:04</span><div><b>Mistake 1, 03:44 UTC.</b> The Dev agent opens PR #545 with realistic-looking fake keys in a test file, in a public repository. Go tests and lint pass; the secret scan, which checks every commit, fails and stops the PR.</div></li>
+      <li><span class="ts">0:14</span><div><b>Mistake 2, 16:18 UTC.</b> An AI rebuild of that PR, made on the wrong base, adds the intended API-key permission check (#538) but also removes two merged features: a clearer connection error (#524) and account deletion (#543). The Reviewer agent reads the diff and blocks it: the PR reverts merged work unrelated to #538.</div></li>
+      <li><span class="ts">0:25</span><div><b>Fixed at 18:32 UTC.</b> Rebuilt as PR #552 with only the intended change: secret scan clean, nothing deleted, reviewed and merged by me. Neither mistake cost anything.</div></li>
+      <li><span class="ts">0:32</span><div><b>Agents make mistakes. Guardrails make them cheap.</b></div></li>
+    </ol>
+
+    <h2 class="sub">More films</h2>
+    <ul class="more-films">
+      <li><a href="../ai-agent-team/">An engineering team made of AI agents</a></li>
+      <li><a href="../delivery-measured/">Delivery, measured</a></li>
+      <li><a href="../ai-reviewer/">What an AI reviewer catches</a></li>
+      <li><a href="../agile-board/">Agile with AI agents</a></li>
+      <li><a href="../devops/">DevOps for a team of AI agents</a></li>
+      <li><a href="../product/">The product the agents built</a></li>
+    </ul>
+
+    <p class="note">A personal study project on testnet: not a commercial product and not investment advice.</p>
+    <div class="cta">
+      <a class="btn primary" href="../../#work">Read the case study</a>
+      <a class="btn" href="https://www.linkedin.com/in/robertochau">LinkedIn</a>
+      <a class="btn" href="https://github.com/rchau73/optionsBot">Code on GitHub</a>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap foot">
+  <span>© 2026 Roberto Chau</span>
+  <span>Built with Claude Code; hosted on GitHub Pages.</span>
+</footer>
+</body>
+</html>

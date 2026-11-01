@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>DevOps for a team of AI agents — Roberto Chau</title>
+<meta name="description" content="A 42-second film: A scheduler wakes the AI agents every 6 minutes; one ticket goes from epic to Done in 45 minutes; CI runs on GitHub Actions on every push; stable takes a release only after a 3-day soak or an escalation with its reason on record. By Roberto Chau.">
+<meta name="author" content="Roberto Chau">
+<link rel="canonical" href="https://rchau73.github.io/videos/devops/">
+<meta property="og:type" content="video.other">
+<meta property="og:url" content="https://rchau73.github.io/videos/devops/">
+<meta property="og:title" content="DevOps for a team of AI agents">
+<meta property="og:description" content="A scheduler wakes the AI agents every 6 minutes; one ticket goes from epic to Done in 45 minutes; CI runs on GitHub Actions on every push; stable takes a release only after a 3-day soak or an escalation with its reason on record.">
+<meta property="og:image" content="https://rchau73.github.io/media/videoB-poster.jpg">
+<meta property="og:video" content="https://rchau73.github.io/media/videoB-devops.mp4">
+<meta property="og:video:type" content="video/mp4">
+<meta property="og:video:width" content="1080">
+<meta property="og:video:height" content="1080">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../../style.css">
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "VideoObject", "name": "DevOps for a team of AI agents", "description": "A scheduler wakes the AI agents every 6 minutes; one ticket goes from epic to Done in 45 minutes; CI runs on GitHub Actions on every push; stable takes a release only after a 3-day soak or an escalation with its reason on record.", "thumbnailUrl": "https://rchau73.github.io/media/videoB-poster.jpg", "uploadDate": "2026-10-31", "duration": "PT42S", "contentUrl": "https://rchau73.github.io/media/videoB-devops.mp4", "embedUrl": "https://rchau73.github.io/videos/devops/", "inLanguage": "en", "creator": {"@type": "Person", "name": "Roberto Chau", "url": "https://rchau73.github.io/"}}
+</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-row">
+    <a class="mark" href="../../" aria-label="Roberto Chau, home">RCH</a>
+    <nav>
+      <a href="../../#work">Work</a>
+      <a href="../../#films">Films</a>
+      <a href="../../#sdlc">AI SDLC</a>
+      <a href="../../#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="wrap watch">
+    <p class="eyebrow">Film · 42 seconds · captioned</p>
+    <h1>DevOps for a team of AI agents</h1>
+    <figure class="video watch-video">
+      <video controls muted playsinline preload="metadata" poster="../../media/videoB-poster.jpg" width="1080" height="1080">
+        <source src="../../media/videoB-devops.mp4" type="video/mp4">
+      </video>
+    </figure>
+    <p class="lede">Every 6 minutes a scheduler wakes the agents that work on optionsBot, a trading system I run on an exchange's test environment. CI, deploys and releases do the rest; the changes that carry risk wait for a person.</p>
+    <aside class="scope" role="note"><b>About this page.</b> It shows the agentic approach: how AI agents and people share the work. It is not a detailed account of the implementation. For the scripts, the agents' rules and the full workflow, see the <a href="https://github.com/rchau73/optionsBot">repository on GitHub</a>.</aside>
+
+    <h2 class="sub">What the film shows</h2>
+    <ol class="scenes">
+      <li><span class="ts">0:04</span><div><b>The scheduler.</b> One macOS launchd job, every 360 seconds. Each tick runs, in order: <code>deploy.sh</code> (main to the mvp environment, health check, cards to Done), <code>pr_gate.sh</code> (CI green → ready; reviewed clean → merge), the Reviewer agent, the Dev agent (one Ready card → a pull request) and the PM agent (triage, epics, board ranking). Daily and weekly jobs add DORA metrics, flaky-test checks, backups and reports. The Dev and Reviewer agents each work in their own git worktree.</div></li>
+      <li><span class="ts">0:12</span><div><b>One ticket in the logs.</b> Ticket #553 on 30 October 2026, local time (UTC−3): tagged with its epic at 16:00, the Dev agent starts at 16:08, the pull request with tests opens at 16:31, CI is green at 16:36, I merge it at 16:40 (it changes a trading rule, so a person merges it), it is deployed and healthy at 16:45 and the card moves to Done. From epic to Done in 45 minutes.</div></li>
+      <li><span class="ts">0:22</span><div><b>CI on GitHub Actions.</b> Every push and pull request runs a secret scan, lint, tests under the race detector, a coverage floor, the frontend build, a vulnerability scan and a Docker build.</div></li>
+      <li><span class="ts">0:31</span><div><b>Audited releases.</b> Every deploy is recorded in <code>deploys.tsv</code>. Stable moves only by release: after 3 days on mvp, or by an escalation whose reason is kept on record.</div></li>
+      <li><span class="ts">0:38</span><div><b>Engineering excellence, automated. Judgement, kept human.</b></div></li>
+    </ol>
+
+    <h2 class="sub">More films</h2>
+    <ul class="more-films">
+      <li><a href="../ai-agent-team/">An engineering team made of AI agents</a></li>
+      <li><a href="../two-mistakes-caught/">Two AI mistakes in one day</a></li>
+      <li><a href="../delivery-measured/">Delivery, measured</a></li>
+      <li><a href="../ai-reviewer/">What an AI reviewer catches</a></li>
+      <li><a href="../agile-board/">Agile with AI agents</a></li>
+      <li><a href="../product/">The product the agents built</a></li>
+    </ul>
+
+    <p class="note">A personal study project on testnet: not a commercial product and not investment advice.</p>
+    <div class="cta">
+      <a class="btn primary" href="../../#work">Read the case study</a>
+      <a class="btn" href="https://www.linkedin.com/in/robertochau">LinkedIn</a>
+      <a class="btn" href="https://github.com/rchau73/optionsBot">Code on GitHub</a>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap foot">
+  <span>© 2026 Roberto Chau</span>
+  <span>Built with Claude Code; hosted on GitHub Pages.</span>
+</footer>
+</body>
+</html>

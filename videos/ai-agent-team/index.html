@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>An engineering team made of AI agents — Roberto Chau</title>
+<meta name="description" content="A 36-second film: One real ticket through a loop of AI agents (domain expert, product manager, developer, reviewer) and the change that stops at a person; then one month of delivery: 302 pull requests, 4 minutes from merge to live, 1 % change failure rate. By Roberto Chau.">
+<meta name="author" content="Roberto Chau">
+<link rel="canonical" href="https://rchau73.github.io/videos/ai-agent-team/">
+<meta property="og:type" content="video.other">
+<meta property="og:url" content="https://rchau73.github.io/videos/ai-agent-team/">
+<meta property="og:title" content="An engineering team made of AI agents">
+<meta property="og:description" content="One real ticket through a loop of AI agents (domain expert, product manager, developer, reviewer) and the change that stops at a person; then one month of delivery: 302 pull requests, 4 minutes from merge to live, 1 % change failure rate.">
+<meta property="og:image" content="https://rchau73.github.io/media/video1-poster.jpg">
+<meta property="og:video" content="https://rchau73.github.io/media/video1-ai-agent-team.mp4">
+<meta property="og:video:type" content="video/mp4">
+<meta property="og:video:width" content="1080">
+<meta property="og:video:height" content="1080">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../../style.css">
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "VideoObject", "name": "An engineering team made of AI agents", "description": "One real ticket through a loop of AI agents (domain expert, product manager, developer, reviewer) and the change that stops at a person; then one month of delivery: 302 pull requests, 4 minutes from merge to live, 1 % change failure rate.", "thumbnailUrl": "https://rchau73.github.io/media/video1-poster.jpg", "uploadDate": "2026-10-30", "duration": "PT36S", "contentUrl": "https://rchau73.github.io/media/video1-ai-agent-team.mp4", "embedUrl": "https://rchau73.github.io/videos/ai-agent-team/", "inLanguage": "en", "creator": {"@type": "Person", "name": "Roberto Chau", "url": "https://rchau73.github.io/"}}
+</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-row">
+    <a class="mark" href="../../" aria-label="Roberto Chau, home">RCH</a>
+    <nav>
+      <a href="../../#work">Work</a>
+      <a href="../../#films">Films</a>
+      <a href="../../#sdlc">AI SDLC</a>
+      <a href="../../#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="wrap watch">
+    <p class="eyebrow">Film · 36 seconds · captioned</p>
+    <h1>An engineering team made of AI agents</h1>
+    <figure class="video watch-video">
+      <video controls muted playsinline preload="metadata" poster="../../media/video1-poster.jpg" width="1080" height="1080">
+        <source src="../../media/video1-ai-agent-team.mp4" type="video/mp4">
+      </video>
+    </figure>
+    <p class="lede">I run an engineering team made of AI agents on optionsBot, a trading system on an exchange's test environment. This film follows one real ticket through it, and shows what I still decide myself.</p>
+    <aside class="scope" role="note"><b>About this page.</b> It shows the agentic approach: how AI agents and people share the work. It is not a detailed account of the implementation. For the scripts, the agents' rules and the full workflow, see the <a href="https://github.com/rchau73/optionsBot">repository on GitHub</a>.</aside>
+
+    <h2 class="sub">What the film shows</h2>
+    <ol class="scenes">
+      <li><span class="ts">0:04</span><div><b>One ticket, five roles.</b> Issue #553: a repair picked a strike from a broken quote. The domain-expert agent spots it in the live bots and files the issue with evidence. The product-manager agent places it in the strategy epic and moves it to Ready. The Dev agent writes the fix and its tests and opens PR #556. The Reviewer agent checks the diff against the repository's rules. It changes a trading rule, which is policy, so I read it and merge it.</div></li>
+      <li><span class="ts">0:16</span><div><b>Agents propose everything. A person merges what carries risk.</b> Docs and monitor pages, tests and tooling, and agent-workflow fixes ship on their own once reviewed clean with CI green. Trading and risk rules, configuration and CI, agent permissions and every release to stable wait for me.</div></li>
+      <li><span class="ts">0:24</span><div><b>One month of delivery, October 2026.</b> 302 pull requests merged, 167 of them written by the Dev agent; 4 minutes from merge to live on mvp (median); 1 % change failure rate.</div></li>
+      <li><span class="ts">0:32</span><div><b>AI writes the code. I decide what ships.</b></div></li>
+    </ol>
+
+    <h2 class="sub">More films</h2>
+    <ul class="more-films">
+      <li><a href="../two-mistakes-caught/">Two AI mistakes in one day</a></li>
+      <li><a href="../delivery-measured/">Delivery, measured</a></li>
+      <li><a href="../ai-reviewer/">What an AI reviewer catches</a></li>
+      <li><a href="../agile-board/">Agile with AI agents</a></li>
+      <li><a href="../devops/">DevOps for a team of AI agents</a></li>
+      <li><a href="../product/">The product the agents built</a></li>
+    </ul>
+
+    <p class="note">A personal study project on testnet: not a commercial product and not investment advice.</p>
+    <div class="cta">
+      <a class="btn primary" href="../../#work">Read the case study</a>
+      <a class="btn" href="https://www.linkedin.com/in/robertochau">LinkedIn</a>
+      <a class="btn" href="https://github.com/rchau73/optionsBot">Code on GitHub</a>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap foot">
+  <span>© 2026 Roberto Chau</span>
+  <span>Built with Claude Code; hosted on GitHub Pages.</span>
+</footer>
+</body>
+</html>
