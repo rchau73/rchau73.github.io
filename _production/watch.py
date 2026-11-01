@@ -8,12 +8,12 @@ DEFAULT_SCOPE = "It shows the agentic approach: how AI agents and people share t
 FILMS = [
  dict(slug="ai-agent-team", file="video1-ai-agent-team.mp4", poster="video1-poster.jpg", secs=36, date="2026-10-30",
   title="An engineering team made of AI agents",
-  desc="One real ticket through a loop of AI agents (domain expert, product manager, developer, reviewer) and the change that stops at a person; then one month of delivery: 302 pull requests, 4 minutes from merge to live, 1 % change failure rate.",
+  desc="One real ticket through a loop of AI agents (domain expert, product manager, developer, reviewer) and the change that stops at a person; then October in numbers: over 300 pull requests merged and, in the last week, 4 minutes from merge to live with a 1 % change failure rate.",
   lede="I run an engineering team made of AI agents on optionsBot, a trading system on an exchange's test environment. This film follows one real ticket through it, and shows what I still decide myself.",
   scenes=[
    ("0:04","One ticket, five roles.","Issue #553: a repair picked a strike from a broken quote. The domain-expert agent spots it in the live bots and files the issue with evidence. The product-manager agent places it in the strategy epic and moves it to Ready. The Dev agent writes the fix and its tests and opens PR #556. The Reviewer agent checks the diff against the repository's rules. It changes a trading rule, which is policy, so I read it and merge it."),
    ("0:16","Agents propose everything. A person merges what carries risk.","Docs and monitor pages, tests and tooling, and agent-workflow fixes ship on their own once reviewed clean with CI green. Trading and risk rules, configuration and CI, agent permissions and every release to stable wait for me."),
-   ("0:24","One month of delivery, October 2026.","302 pull requests merged, 167 of them written by the Dev agent; 4 minutes from merge to live on mvp (median); 1 % change failure rate."),
+   ("0:24","One month of delivery, October 2026.","Over 300 pull requests merged, 167 of them written by the Dev agent. The film's other two figures come from the last week of October, on mvp, the test environment: 4 minutes from merge to live (median) and a 1 % change failure rate (1 of 85 changes)."),
    ("0:32","AI writes the code. I decide what ships.",""),
   ]),
  dict(slug="two-mistakes-caught", file="video2-two-mistakes-caught.mp4", poster="video2-poster.jpg", secs=36, date="2026-10-30",

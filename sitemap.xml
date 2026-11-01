@@ -6,7 +6,7 @@
     <video:video>
       <video:thumbnail_loc>https://rchau73.github.io/media/video1-poster.jpg</video:thumbnail_loc>
       <video:title>An engineering team made of AI agents</video:title>
-      <video:description>One real ticket through a loop of AI agents (domain expert, product manager, developer, reviewer) and the change that stops at a person; then one month of delivery: 302 pull requests, 4 minutes from merge to live, 1 % change failure rate.</video:description>
+      <video:description>One real ticket through a loop of AI agents (domain expert, product manager, developer, reviewer) and the change that stops at a person; then October in numbers: over 300 pull requests merged and, in the last week, 4 minutes from merge to live with a 1 % change failure rate.</video:description>
       <video:content_loc>https://rchau73.github.io/media/video1-ai-agent-team.mp4</video:content_loc>
       <video:duration>36</video:duration>
       <video:publication_date>2026-10-30</video:publication_date>
