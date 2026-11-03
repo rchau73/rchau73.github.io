@@ -123,9 +123,10 @@ nav a:hover { color: var(--ink); }
 .diagram figcaption { margin-top: 0.6rem; font-size: 0.9rem; color: var(--muted); }
 .sub { margin-top: 3rem; }
 .films.four { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.films.five { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .films.two { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 46rem; }
-@media (max-width: 1000px) { .films.four { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 560px) { .films.four, .films.two { grid-template-columns: 1fr; } }
+@media (max-width: 1000px) { .films.four, .films.five { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .films.four, .films.five, .films.two { grid-template-columns: 1fr; } }
 .track { list-style: none; margin: 2rem 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
 .track li { background: var(--card); border: 1px solid var(--line); border-top: 3px solid var(--accent); border-radius: 10px; padding: 1.1rem 1.2rem 1.25rem; display: flex; flex-direction: column; gap: 0.45rem; min-width: 0; }
 .track .when { font: 500 0.78rem "IBM Plex Mono", ui-monospace, monospace; color: var(--muted); letter-spacing: 0.02em; }

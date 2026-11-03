@@ -1,0 +1,81 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="common.css">
+<style>
+.num{height:auto;min-height:200px}
+.num .v{font-size:84px}
+.fix{margin-top:26px;border-left:6px solid var(--accent);padding:16px 24px;background:var(--card);border-radius:0 14px 14px 0;font:400 29px/1.35 var(--sans);opacity:0}
+.fix b{font:500 22px var(--mono);color:var(--accent);letter-spacing:.06em;text-transform:uppercase;display:block;margin-bottom:6px}
+.vc{margin-top:40px;display:flex;flex-direction:column;gap:22px}
+.st{display:grid;grid-template-columns:230px 1fr;align-items:center;gap:22px;opacity:0}
+.st .n{font:500 30px var(--sans)}
+.st .b{height:58px;border-radius:10px;background:var(--accent);display:flex;align-items:center;padding-left:18px;font:600 30px var(--mono);color:#0b1210;width:0;white-space:nowrap}
+.st.me .n{color:var(--human)} .st.me .b{background:var(--human)}
+</style></head><body>
+
+<section class="scene" id="s1">
+  <div class="eyebrow">October 2026 · 182 PRs written by AI agents</div>
+  <h1>Where a team of AI agents loses time.</h1>
+  <h2 id="t1b" style="margin-top:40px;color:var(--muted);opacity:0">Not in writing the code.</h2>
+</section>
+
+<section class="scene" id="s2">
+  <div class="k">1 · Merge conflicts</div>
+  <div class="nums" style="margin-top:30px">
+    <div class="num"><div class="v" data-to="29">0</div><div class="l">of 171 merges on main had a conflict</div></div>
+    <div class="num"><div class="v" data-to="26">0</div><div class="l">PRs sent back for a new agent run</div></div>
+  </div>
+  <div class="box" id="c3" style="margin-top:26px;font:400 30px/1.35 var(--sans);opacity:0"><span class="mono warn">CLAUDE.md</span> was changed by 98 of 171 PRs, whole sections on one line.</div>
+  <div class="fix" id="c4"><b>Fix</b>One doc per folder, one sentence per line, sorted lists. Send-backs: 23 in 92 PRs → 3 in 18.</div>
+</section>
+
+<section class="scene" id="s3">
+  <div class="k">2 · Waiting on a person</div>
+  <h2 style="margin-top:14px">Where an agent PR's time goes</h2>
+  <div class="vc">
+    <div class="st"><div class="n">Build</div><div class="b" data-w="190">17 min</div></div>
+    <div class="st"><div class="n">AI review</div><div class="b" data-w="170">6 min</div></div>
+    <div class="st me"><div class="n">My merge</div><div class="b" data-w="640">12 h</div></div>
+    <div class="st"><div class="n">Deploy</div><div class="b" data-w="170">4 min</div></div>
+  </div>
+  <div class="note" id="n3" style="opacity:0">Medians; bars not to scale. 60 % of agent PRs change a policy and wait for me; the 12 h is those PRs since 30 Oct.</div>
+</section>
+
+<section class="scene" id="s4">
+  <div class="k">3 · Huge PRs, partial reviews</div>
+  <div class="nums" style="margin-top:30px">
+    <div class="num"><div class="v" data-to="608">0</div><div class="l">lines in the median agent PR, about half of them tests</div></div>
+    <div class="num"><div class="v" data-to="43">0</div><div class="l">of 182 changed over 1,000 lines</div></div>
+  </div>
+  <div class="box comment" id="r3" style="margin-top:26px;opacity:0">
+    <div class="k">One review</div>
+    <div style="font:600 32px/1.3 var(--sans);margin-top:10px">A 2,381-line diff, read to line 2,000, <span class="bad">marked clean.</span></div>
+  </div>
+  <div class="fix" id="r4"><b>Fix</b>The diff goes per file. A partial read is "incomplete", never "clean".</div>
+</section>
+
+<section class="scene" id="s5"><div class="end">
+  <h1>Agents write the code fast.<br><span style="color:var(--human)">My job: remove what slows them.</span></h1>
+  <div class="who">Roberto Chau · Engineering leader, AI-first delivery</div>
+  <div class="url">linkedin.com/in/robertochau</div>
+</div></section>
+
+<div class="cap" id="cap"></div><div class="bar" id="bar"></div>
+<script src="common.js"></script>
+<script>
+const D=42, t=T;
+$('#s1').style.opacity=vis(t,0,4.6); $('#t1b').style.opacity=ease(p(t,1.4,2.2));
+$('#s2').style.opacity=vis(t,4.4,15.4);
+$$('#s2 .num').forEach((n,i)=>{n.style.opacity=ease(p(t,5+i*.8,5.6+i*.8)); count(n.querySelector('.v'),t,5+i*.8,7.2+i*.8);});
+$('#c3').style.opacity=ease(p(t,8.6,9.2)); $('#c4').style.opacity=ease(p(t,11,11.6));
+$('#s3').style.opacity=vis(t,15.4,26.4);
+$$('#s3 .st').forEach((s,i)=>{const a=16.4+i*1.3; s.style.opacity=ease(p(t,a,a+.4)); const b=s.querySelector('.b'); b.style.width=(+b.dataset.w*io(p(t,a+.2,a+(i==2?2.2:.9))))+'px';});
+$('#n3').style.opacity=ease(p(t,21.5,22.1));
+$('#s4').style.opacity=vis(t,26.4,36.4);
+$$('#s4 .num').forEach((n,i)=>{n.style.opacity=ease(p(t,27+i*.8,27.6+i*.8)); count(n.querySelector('.v'),t,27+i*.8,29.2+i*.8);});
+$('#r3').style.opacity=ease(p(t,30.4,31)); $('#r4').style.opacity=ease(p(t,32.8,33.4));
+$('#s5').style.opacity=vis(t,36.4,D+1);
+captions(t,[[5,15,"Every PR edited the same shared docs. Git merges line by line, so they collided."],
+  [16,26,"Build, review and deploy take minutes. The wait for my approval takes hours."],
+  [27,36,"Big PRs strained the AI reviewer. Now it can't pass what it didn't read."]]);
+$('#bar').style.width=(1080*t/D)+'px';
+</script></body></html>

@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Where a team of AI agents loses time — Roberto Chau</title>
+<meta name="description" content="A 42-second film: where a team of AI agents lost time on optionsBot in October 2026. Merge conflicts on shared docs, hours waiting for a person on policy changes, and huge PRs that an AI reviewer only partly read, each with its number and its fix. By Roberto Chau.">
+<meta name="author" content="Roberto Chau">
+<link rel="canonical" href="https://rchau73.github.io/videos/where-time-goes/">
+<meta property="og:type" content="video.other">
+<meta property="og:url" content="https://rchau73.github.io/videos/where-time-goes/">
+<meta property="og:title" content="Where a team of AI agents loses time">
+<meta property="og:description" content="Where a team of AI agents lost time on optionsBot in October 2026: merge conflicts on shared docs, hours waiting for a person on policy changes, and huge PRs an AI reviewer only partly read, each with its number and its fix.">
+<meta property="og:image" content="https://rchau73.github.io/media/videoD-poster.jpg">
+<meta property="og:video" content="https://rchau73.github.io/media/videoD-where-time-goes.mp4">
+<meta property="og:video:type" content="video/mp4">
+<meta property="og:video:width" content="1080">
+<meta property="og:video:height" content="1080">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../../style.css">
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "VideoObject", "name": "Where a team of AI agents loses time", "description": "Where a team of AI agents lost time on optionsBot in October 2026: merge conflicts on shared docs, hours waiting for a person on policy changes, and huge PRs an AI reviewer only partly read, each with its number and its fix.", "thumbnailUrl": "https://rchau73.github.io/media/videoD-poster.jpg", "uploadDate": "2026-11-03", "duration": "PT42S", "contentUrl": "https://rchau73.github.io/media/videoD-where-time-goes.mp4", "embedUrl": "https://rchau73.github.io/videos/where-time-goes/", "inLanguage": "en", "creator": {"@type": "Person", "name": "Roberto Chau", "url": "https://rchau73.github.io/"}}
+</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-row">
+    <a class="mark" href="../../" aria-label="Roberto Chau, home">RCH</a>
+    <nav>
+      <a href="../../#work">Work</a>
+      <a href="../../#films">Films</a>
+      <a href="../../#sdlc">AI SDLC</a>
+      <a href="../../#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="wrap watch">
+    <p class="eyebrow">Film · 42 seconds · captioned</p>
+    <h1>Where a team of AI agents loses time</h1>
+    <figure class="video watch-video">
+      <video controls muted playsinline preload="metadata" poster="../../media/videoD-poster.jpg" width="1080" height="1080">
+        <source src="../../media/videoD-where-time-goes.mp4" type="video/mp4">
+      </video>
+    </figure>
+    <p class="lede">The agents write code in minutes. In October 2026 the time went elsewhere: conflicts on shared files, waiting for a person, and reviews of very large changes. Each problem, its number, and what fixed it.</p>
+    <aside class="scope" role="note"><b>About this page.</b> It shows the agentic approach: how AI agents and people share the work. It is not a detailed account of the implementation. For the scripts, the agents' rules and the full workflow, see the <a href="https://github.com/rchau73/optionsBot">repository on GitHub</a>.</aside>
+
+    <h2 class="sub">What the film shows</h2>
+    <ol class="scenes">
+      <li><span class="ts">0:04</span><div><b>1 · Merge conflicts.</b> 29 of 171 merges on main had a conflict (14 to 28 October), and 26 PRs were sent back for a new Dev agent run. Every PR edited the same shared docs: CLAUDE.md was changed by 98 of 171 PRs, with whole sections on one line, and git merges line by line. Fix: one doc per folder, one sentence per line, sorted lists. Send-backs went from 23 in 92 PRs to 3 in 18.</div></li>
+      <li><span class="ts">0:15</span><div><b>2 · Waiting on a person.</b> The median agent PR is built in 17 minutes, reviewed by AI in 6, and live 4 minutes after the merge. 60 % of agent PRs change a policy (trading rules, risk, config, CI) and wait for me: since 30 October a median of 12 hours. Build, review and deploy take minutes; the wait for my approval takes hours.</div></li>
+      <li><span class="ts">0:26</span><div><b>3 · Huge PRs, partial reviews.</b> The median agent PR changes 608 lines, about half of them tests, and 43 of 182 changed over 1,000. One review read a 2,381-line diff to line 2,000 and marked it clean. Fix: the diff goes to the reviewer per file, and a partial read is "incomplete", never "clean".</div></li>
+      <li><span class="ts">0:36</span><div><b>Agents write the code fast. My job: remove what slows them.</b></div></li>
+    </ol>
+
+    <h2 class="sub">More films</h2>
+    <ul class="more-films">
+      <li><a href="../ai-agent-team/">An engineering team made of AI agents</a></li>
+      <li><a href="../two-mistakes-caught/">Two AI mistakes in one day</a></li>
+      <li><a href="../delivery-measured/">Delivery, measured</a></li>
+      <li><a href="../ai-reviewer/">What an AI reviewer catches</a></li>
+      <li><a href="../agile-board/">Agile with AI agents</a></li>
+      <li><a href="../devops/">DevOps for a team of AI agents</a></li>
+      <li><a href="../product/">The product the agents built</a></li>
+    </ul>
+
+    <p class="note">A personal study project on testnet: not a commercial product and not investment advice.</p>
+    <div class="cta">
+      <a class="btn primary" href="../../#work">Read the case study</a>
+      <a class="btn" href="https://www.linkedin.com/in/robertochau">LinkedIn</a>
+      <a class="btn" href="https://github.com/rchau73/optionsBot">Code on GitHub</a>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap foot">
+  <span>© 2026 Roberto Chau</span>
+  <span>Built with Claude Code; hosted on GitHub Pages.</span>
+</footer>
+</body>
+</html>

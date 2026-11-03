@@ -24,6 +24,17 @@
     </video:video>
   </url>
   <url>
+    <loc>https://rchau73.github.io/videos/where-time-goes/</loc><lastmod>2026-11-03</lastmod>
+    <video:video>
+      <video:thumbnail_loc>https://rchau73.github.io/media/videoD-poster.jpg</video:thumbnail_loc>
+      <video:title>Where a team of AI agents loses time</video:title>
+      <video:description>Where a team of AI agents lost time on optionsBot in October 2026: merge conflicts on shared docs, hours waiting for a person on policy changes, and huge PRs an AI reviewer only partly read, each with its number and its fix.</video:description>
+      <video:content_loc>https://rchau73.github.io/media/videoD-where-time-goes.mp4</video:content_loc>
+      <video:duration>42</video:duration>
+      <video:publication_date>2026-11-03</video:publication_date>
+    </video:video>
+  </url>
+  <url>
     <loc>https://rchau73.github.io/videos/delivery-measured/</loc><lastmod>2026-11-01</lastmod>
     <video:video>
       <video:thumbnail_loc>https://rchau73.github.io/media/video3-poster.jpg</video:thumbnail_loc>
