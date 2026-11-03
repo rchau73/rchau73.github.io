@@ -13,7 +13,7 @@ FILMS = [
   scenes=[
    ("0:04","One ticket, five roles.","Issue #553: a repair picked a strike from a broken quote. The domain-expert agent spots it in the live bots and files the issue with evidence. The product-manager agent places it in the strategy epic and moves it to Ready. The Dev agent writes the fix and its tests and opens PR #556. The Reviewer agent checks the diff against the repository's rules. It changes a trading rule, which is policy, so I read it and merge it."),
    ("0:16","Agents propose everything. A person merges what carries risk.","Docs and monitor pages, tests and tooling, and agent-workflow fixes ship on their own once reviewed clean with CI green. Trading and risk rules, configuration and CI, agent permissions and every release to stable wait for me."),
-   ("0:24","One month of delivery, October 2026.","Over 300 pull requests merged, 167 of them written by the Dev agent. The film's other two figures come from the last week of October, on mvp, the test environment: 4 minutes from merge to live (median) and a 1 % change failure rate (1 of 85 changes)."),
+   ("0:24","One month of delivery, October 2026.","Over 300 pull requests merged, 167 of them written by the Dev agent. The film's other two figures come from the last week of October, on mvp, the test environment: 4 minutes from merge to live (median) and a 1 % change failure rate (1 of 88 changes)."),
    ("0:32","AI writes the code. I decide what ships.",""),
   ]),
  dict(slug="two-mistakes-caught", file="video2-two-mistakes-caught.mp4", poster="video2-poster.jpg", secs=36, date="2026-10-30",
@@ -31,7 +31,7 @@ FILMS = [
   desc="The four DORA metrics for a team of AI agents in the week of 26 October 2026, one change from issue to live in 50 minutes, and why the test and stable environments move at different speeds.",
   lede="How fast does a team of AI agents ship? I don't guess; I measure it, with the four DORA metrics per environment.",
   scenes=[
-   ("0:04","The four DORA metrics, week of 26 October 2026, mvp.","84 deploys in one week; 4 minutes from merge to live (median, p90 7 minutes); 1 % change failure rate (1 of 85); 57 minutes to restore (one incident). Elite on three of the four by DORA bands; time to restore has one sample, too few to rate."),
+   ("0:04","The four DORA metrics, week of 26 October 2026, mvp.","87 deploys in one week; 4 minutes from merge to live (median, p90 8 minutes); 1 % change failure rate (1 of 88); 57 minutes to restore (one incident). Elite on three of the four by DORA bands; time to restore has one sample, too few to rate."),
    ("0:13","One change, 30 October 2026 (UTC).","18:55 issue #553 filed with evidence; 19:31 the Dev agent opens PR #556 with tests; 19:40 it changes a trading rule, so I merge it; 19:45 live on mvp, the test environment. From a filed issue to live in 50 minutes, with a person on the risky step."),
    ("0:24","Two speeds, on purpose.","mvp: 4 minutes from merge to live, on every merge. stable: 3.1 days median, because every release soaks 3 days on mvp first."),
    ("0:32","Fast where it's safe. Slow where it matters.",""),
